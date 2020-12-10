@@ -19,7 +19,7 @@ gblur = cv2.GaussianBlur(img, (5, 5), 0) #gaussian blur uses different weighted 
 median = cv2.medianBlur(img, 5) #replaces every pixel value with median of its neighbouring pixels, 
 #GREAT WHEN USING SALT AND PEPPER NOISE
 
-bilateralFilter = cv2.bilateralFilter(img, 9, 75, 75)
+bilateralFilter = cv2.bilateralFilter(img, 9, 75, 75) #highly effective in removing noise keeping the edge sharp
 
 titles = ['image', '2D Convolution', 'blur', 'GaussianBlur', 'median', 'bilateralFilter']
 images = [img, dst, blur, gblur, median, bilateralFilter]
